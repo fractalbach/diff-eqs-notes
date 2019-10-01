@@ -2,13 +2,21 @@
 documentclass: scrartcl
 papersize: letter
 fontsize: 12pt
+header-includes: |
+    \usepackage{fancyhdr}
+    \pagestyle{fancy}
+    \fancyhead[EL, OR]{\footnotesize{\textsl{\today}}}
+    \fancyhead[OL, ER]{\footnotesize{\textsl{DiffEq Calculus Review Notes}}}
 ---
 
-# Common Derivatives
+Derivatives
+============================================================
+Common Derivatives
+------------------------------------------------------------
 
 $$\begin{aligned}
 \hline
-\textbf{Name} && \textbf{Function} && \textbf{Derivative} \\
+\textbf{   Name   } && \textbf{   Function   } && \textbf{   Derivative   } \\
 \hline
 \\
 \text{Constant}
@@ -40,11 +48,14 @@ $$\begin{aligned}
 \end{aligned}$$
 
 
-# Special Derivative Rules
+
+
+Special Derivative Rules
+------------------------------------------------------------
 
 $$\begin{aligned}
 \hline
-\textbf{Rule} && \textbf{Function} && \textbf{Derivative} \\
+\textbf{   Rule   } && \textbf{   Function   } && \textbf{   Derivative   } \\
 \hline
 \\
 \text{Multiply by Constant}
@@ -63,7 +74,7 @@ $$\begin{aligned}
     && \frac{f}{g} && \frac{gf'-fg'}{g^2} \\
 \\
 \text{Reciprocal Rule}
-    && \frac{1}{f} && -\frac{f}{f^2} \\
+    && \frac{1}{f} && -\frac{f'}{f^2} \\
 \\
 \text{Chain Rule (Notation 1)}
     && f\circ g &&(f' \circ g) \cdot g' \\
@@ -74,41 +85,57 @@ $$\begin{aligned}
 \end{aligned}$$
 
 
-# Blah
-
-$\frac{d}{dx}( c ) = 0$
-
-$\frac{d}{dx}( x^n ) = nx^{n-1}$
-
-$\frac{d}{dx}(f+g) = f' + g'$
-
-$\frac{d}{dx}(fg) = fg' + gf'$
 
 
 
-# Integration
+Integration
+============================================================
 
-## Basic Properties of Integrals
+Common Integrals
+------------------------------------------------------------
 
-1. $$\int a\,f(x)\,dx \ = a \int f(x)\,dx$$
-2. $$\int [ f(x)+g(x) ] \,dx \ = \int f(x)\,dx + \int g(x)\,dx$$
+$$\begin{aligned}
+\hline
+\textbf{   Name   } && \textbf{   Function   } && \textbf{   Integral   } \\
+\hline
+\\
+\text{Constant}
+    && \int a \,dx && ax+C \\\\
+\text{Variable}
+    && \int x \,dx && \frac{x^2}{2}+C \\\\
+\text{Reciprocal}
+    && \int \frac{1}{x} \,dx && \ln |x| + C \\\\
+\text{Exponential}
+    && \int e^x \,dx && e^x + C \\\\
+\text{Trig}
+    && \int \cos(x) \,dx && \sin(x)+C \\\\
+    && \int \sin(x) \,dx && -\cos(x)+C \\\\
+    && \int \sec^2(x) \,dx && \tan(x)+C \\\\
+\end{aligned}$$
 
-## Integration by Parts
+\pagebreak
+
+
+Integration by Parts
+------------------------------------------------------------
+
 $$ \int u \ dv = uv - \int v \ {du} $$
 For Integration by Parts, Pick $u$ and $dv$ from your equation.
 $$
 \begin{aligned}
-    u & =\text{___} &\quad
-        dv &=\text{___}
+    u & = \text{\_\_\_} &\quad
+        dv &=\text{\_\_\_}
         && \leftarrow \text{pick these.}
     \\
-    du& =\text{___} &\quad
-        v&= \text{___}
-        && \leftarrow \text{derive from above.}
+    du &= \text{\_\_\_} &\quad
+    v &= \text{\_\_\_}
+    && \leftarrow \text{derive from above.}
 \end{aligned}
 $$
 
-## Integration by Substitution
+
+Integration by Substitution
+------------------------------------------------------------
 When you notice an equation that could be in the form:
 $$
     \int f(g(x)) \, g'(x) \,dx
