@@ -34,7 +34,7 @@ Practice Problems
 For these problems, assume:\
 Variables: $x,y,z,u,v$\
 Constants: $a,b,n$\
-
+cheatsheet
 1. $\frac{d}{dx}\left( x^3 \sin(x) \right)$
 
 1. $\frac{d}{dx} \left( \frac{\ln(x)}{\cos(x)} \right)$
